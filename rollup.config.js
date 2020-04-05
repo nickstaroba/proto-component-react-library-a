@@ -46,6 +46,7 @@ function createPackageJson() {
                 main: path.basename(cjsBundleFilename),
                 module: path.basename(esmBundleFilename),
                 types: "index",
+                dependencies: packageJson.dependencies,
                 peerDependencies: packageJson.peerDependencies,
             },
             null,
@@ -57,17 +58,13 @@ function createPackageJson() {
 const plugins = [peerDepsExternal(), image(), terser(), filesize()];
 
 const cjsConfig = {
-    external: ["clsx", "react-is"],
+    external: ["clsx", "react", "react-is"],
     input: "src/index.ts",
     output: [
         {
             exports: "named",
             file: cjsBundleFilename,
             format: "cjs",
-            globals: {
-                clsx: "clsx",
-                react: "React",
-            },
         },
     ],
     plugins: [
@@ -89,17 +86,13 @@ const cjsConfig = {
 };
 
 const esmConfig = {
-    external: ["clsx", "react-is"],
+    external: ["clsx", "react", "react-is"],
     input: "src/index.ts",
     output: [
         {
             exports: "named",
             file: esmBundleFilename,
             format: "es",
-            globals: {
-                clsx: "clsx",
-                react: "React",
-            },
         },
     ],
     plugins: [

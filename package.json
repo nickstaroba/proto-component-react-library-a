@@ -37,12 +37,15 @@
         "hooks": {
             "pre-commit": "npm run lint",
             "commit-msg": "npm run commit-msg",
-            "pre-push": "npm run lint"
+            "pre-push": "npm run lint && npm run test"
         }
     },
     "browserslist": [
         "defaults"
     ],
+    "dependencies": {
+        "clsx": "1.1.0"
+    },
     "devDependencies": {
         "@babel/core": "7.9.0",
         "@react-hook/window-size": "1.0.13",
