@@ -1,0 +1,108 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "airbnb-base",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:jest/recommended",
+        "plugin:react/recommended",
+        "prettier",
+        "prettier/react"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "plugins": ["import", "jest", "react", "react-hooks", "simple-import-sort"],
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never"
+            }
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": ["info", "warn", "error"]
+            }
+        ],
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "simple-import-sort/sort": "error",
+        "sort-imports": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".json", ".jsx"]
+            }
+        },
+        "react": {
+            "version": "detect"
+        }
+    },
+    "overrides": [
+        {
+            "extends": [
+                "airbnb-base",
+                "plugin:@typescript-eslint/recommended",
+                "plugin:import/errors",
+                "plugin:import/typescript",
+                "plugin:import/warnings",
+                "plugin:jest/recommended",
+                "plugin:react/recommended",
+                "prettier",
+                "prettier/react"
+            ],
+            "files": ["**/*.ts", "**/*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "plugins": ["@typescript-eslint", "jest", "react", "react-hooks"],
+            "rules": {
+                "@typescript-eslint/no-namespace": "off",
+                "import/extensions": [
+                    "error",
+                    "ignorePackages",
+                    {
+                        "ts": "never",
+                        "tsx": "never"
+                    }
+                ],
+                "import/no-extraneous-dependencies": [
+                    "error",
+                    { "devDependencies": true }
+                ],
+                "import/prefer-default-export": "off",
+                "no-console": [
+                    "error",
+                    {
+                        "allow": ["info", "warn", "error"]
+                    }
+                ],
+                "react/prop-types": "off"
+            },
+            "settings": {
+                "import/resolver": {
+                    "node": {
+                        "paths": ["src"],
+                        "extensions": [".ts", ".tsx"]
+                    }
+                },
+                "react": {
+                    "version": "detect"
+                }
+            }
+        }
+    ]
+}

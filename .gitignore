@@ -1,0 +1,14 @@
+# Project Directories
+coverage/
+dist/
+node_modules/
+
+# Tooling
+*.lerna_backup
+*.log
+
+# IDE
+.idea/
+
+# OS
+.DS_store

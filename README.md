@@ -26,8 +26,8 @@ import "@proto-component/react-library-a/styles.css";
 
 ### App
 
-App acts as a wrapper for the components that make up the application. It applies a minimal set of styles to create a consistent experience for its child components. 
- 
+App acts as a wrapper for the components that make up the application. It applies a minimal set of styles to create a consistent experience for its child components.
+
 App is an optional component.
 
 #### Usage

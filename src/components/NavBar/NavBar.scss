@@ -1,0 +1,150 @@
+@import "../../styles/common";
+
+.NavBar {
+    background-color: $c-gs-90;
+    height: $c-48px;
+
+    &__menu {
+        background-color: $c-gs-90;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        &[aria-expanded="false"] {
+            display: none;
+        }
+
+        &-item {
+            align-items: center;
+            border-top: 1px solid $c-gs-80;
+            display: flex;
+            height: $c-48px;
+        }
+    }
+
+    &__menu-bar {
+        display: flex;
+        height: 100%;
+    }
+
+    &__brand {
+        @include font-heading;
+        align-items: center;
+        color: $c-gs-0;
+        display: inline-flex;
+        flex-grow: 1;
+        height: 100%;
+        min-width: 0;
+        padding: 0 $c-12px;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &-icon {
+            align-items: center;
+            display: flex;
+            margin-right: $c-12px;
+
+            svg {
+                height: $c-24px;
+                width: $c-24px;
+            }
+        }
+
+        &-name {
+            font-size: $c-24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &:focus {
+            @include focus;
+            outline-offset: -2px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: $c-gs-95;
+        }
+    }
+
+    &__menu-button {
+        background: $c-gs-90;
+        border: 0;
+        padding: 0 $c-12px;
+
+        &:focus {
+            @include focus;
+            outline-offset: -2px;
+        }
+
+        &:hover,
+        &:focus {
+            background: $c-gs-95;
+            color: $c-gs-0;
+        }
+    }
+
+    &__menu-link {
+        color: $c-gs-0;
+        height: 100%;
+        line-height: $c-48px;
+        overflow: hidden;
+        padding: 0 $c-16px;
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+
+        &:focus {
+            @include focus;
+            outline-offset: -2px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+            background: $c-gs-95;
+            color: $c-gs-0;
+        }
+    }
+
+    &--menu-open {
+        display: block;
+        position: relative;
+        z-index: 1000;
+    }
+
+    @media only screen and (min-width: $c-breakpoint) {
+        display: flex;
+
+        &__brand-name {
+            white-space: nowrap;
+        }
+
+        &__menu-button {
+            display: none;
+        }
+
+        &__menu {
+            min-width: 0;
+            overflow: auto;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            &[aria-expanded] {
+                display: inline-flex;
+            }
+
+            &-item {
+                border: 0;
+                max-width: 192px;
+                text-align: center;
+            }
+        }
+    }
+}

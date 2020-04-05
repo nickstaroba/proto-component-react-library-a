@@ -1,0 +1,14 @@
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-size: 1.125rem;
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
