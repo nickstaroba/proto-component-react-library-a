@@ -1,7 +1,7 @@
 #!/bin/sh
 
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
-ISSUE_ID=$(echo "$CURRENT_BRANCH" | grep -Eo "#?\d+")
+ISSUE_ID=$(echo "$CURRENT_BRANCH" | grep -Eo "#[0-9]+")
 
 COMMIT_FILE=$1
 

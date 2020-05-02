@@ -2,13 +2,29 @@
 
 ## Install Dependencies
 
-```sh
+```shell script
 npm i
+```
+
+### Windows Installation Issues
+
+Husky may fail to install on Windows 10.
+
+Check for Git in PATH variables:
+
+```shell script
+echo $PATH
+```
+
+Add Git to PATH variables in `~/.bashrc`:
+
+```shell script
+export PATH=$PATH:"/c/Program Files/Git"
 ```
 
 ## Run Storybook
 
-```sh
+```shell script
 npm start
 ```
 
@@ -16,13 +32,13 @@ npm start
 
 Use `standard-version` to bump and release the package.
 
-```sh
+```shell script
 npm run release
 ```
 
 ## Build
 
-```sh
+```shell script
 npm run build
 ```
 
@@ -30,7 +46,7 @@ npm run build
 
 Execute a release, build, test a local install of the build, and then run this command:
 
-```sh
+```shell script
 npm publish dist
 ```
 

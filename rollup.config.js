@@ -19,8 +19,11 @@ const cjsBundleFilename = "dist/index.js";
 const esmBundleFilename = "dist/index.esm.js";
 
 function cleanDistDirectory() {
-    rimraf.sync(distDirectory);
-    fs.mkdirSync(distDirectory);
+    if (fs.existsSync(distDirectory)) {
+        rimraf.sync(`${distDirectory}/**/*`);
+    } else {
+        fs.mkdirSync(distDirectory);
+    }
 }
 
 function createReadme() {
