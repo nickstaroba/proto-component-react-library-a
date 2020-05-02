@@ -61,7 +61,6 @@ function createPackageJson() {
 const plugins = [peerDepsExternal(), image(), terser(), filesize()];
 
 const cjsConfig = {
-    external: ["clsx", "react", "react-is"],
     input: "src/index.ts",
     output: [
         {
@@ -89,7 +88,6 @@ const cjsConfig = {
 };
 
 const esmConfig = {
-    external: ["clsx", "react", "react-is"],
     input: "src/index.ts",
     output: [
         {
