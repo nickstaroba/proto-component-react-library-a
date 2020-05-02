@@ -4,17 +4,11 @@ React component library for prototyping and experimentation.
 
 ## Installation
 
-```
+```shell script
 npm i -P @proto-component/react-library-a
 ```
 
 ## Integration
-
-Styles are extracted from the JavaScript bundle into a single stylesheet:
-
-```
-@proto-component/react-library-a/styles.css
-```
 
 Import styles in the application's root component:
 
@@ -43,7 +37,7 @@ export const Root: FunctionComponent = () => {
 
 ### NavBar
 
-NavBar is a navigation component that supports desktop and mobile resolutions.
+NavBar is a responsive navigation component.
 
 For NavBar to trap focus, `props.mainLink` and the last element of `props.children` must be created with `React.forwardRef`.
 
