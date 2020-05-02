@@ -76,7 +76,7 @@ const cjsConfig = {
         }),
         postcss({
             extensions: [".scss", ".css"],
-            extract: "dist/styles.css",
+            extract: "styles.css",
             plugins: [autoprefixer, clean],
             preprocessor: (content, id) =>
                 new Promise((resolve) => {
