@@ -6,6 +6,7 @@ node_modules/
 # Tooling
 *.lerna_backup
 *.log
+stats.html
 
 # IDE
 .idea/

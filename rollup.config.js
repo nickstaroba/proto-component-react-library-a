@@ -11,6 +11,7 @@ import ignoreImport from "rollup-plugin-ignore-import";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import { terser } from "rollup-plugin-terser";
+import visualizer from "rollup-plugin-visualizer";
 
 import packageJson from "./package.json";
 
@@ -58,7 +59,13 @@ function createPackageJson() {
     );
 }
 
-const plugins = [peerDepsExternal(), image(), terser(), filesize()];
+const plugins = [
+    peerDepsExternal(),
+    image(),
+    terser(),
+    filesize(),
+    visualizer(),
+];
 
 const cjsConfig = {
     input: "src/index.ts",
