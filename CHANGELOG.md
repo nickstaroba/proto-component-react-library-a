@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/nickstaroba/proto-component-react-library-a/compare/v0.1.1...v0.1.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* [[#3](https://github.com/nickstaroba/proto-component-react-library-a/issues/3)] moving react-is to dependencies ([6c44154](https://github.com/nickstaroba/proto-component-react-library-a/commit/6c441547c1cb6eacdfa4c1102ceda684666cd748))
+* [[#4](https://github.com/nickstaroba/proto-component-react-library-a/issues/4)] updating README.md ([4166277](https://github.com/nickstaroba/proto-component-react-library-a/commit/41662771f9929f2a3a00a49c0101b9ef2542156e))
+
 ### [0.1.1](https://github.com/nickstaroba/proto-component-react-library-a/compare/v0.1.0...v0.1.1) (2020-04-05)
 
 
