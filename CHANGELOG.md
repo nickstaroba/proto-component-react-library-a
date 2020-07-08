@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/nickstaroba/proto-component-react-library-a/compare/v0.1.2...v0.1.3) (2020-07-08)
+
+
+### Features
+
+* **component:** [[#6](https://github.com/nickstaroba/proto-component-react-library-a/issues/6)] adding button ([8490a68](https://github.com/nickstaroba/proto-component-react-library-a/commit/8490a68d1c54c8601b4ac8b2a1a784a70adc7abf))
+
 ### [0.1.2](https://github.com/nickstaroba/proto-component-react-library-a/compare/v0.1.1...v0.1.2) (2020-05-02)
 
 
