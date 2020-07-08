@@ -1,13 +1,18 @@
+@use "sass:color";
+
 $c-breakpoint: 768px;
 
 $c-font-body: "Roboto", Arial, sans-serif;
 $c-font-heading: "Roboto Condensed", "Arial Narrow", sans-serif;
 
-$c-color-mulled-wine: #584a6d;
-$c-color-prelude: #bdb1e3;
-$c-color-kobi: #ecb5cc;
-$c-color-prim: #f4eaf2;
-$c-color-alabaster: #fafafa;
+$c-focus: #4c9aff;
+
+/* split complementary colors #008B8B and a shade for primary */
+$c-intent-primary: #004d4d;
+$c-intent-secondary: #008b8b;
+$c-intent-success: #8c5c07;
+$c-intent-warning: #d99216;
+$c-intent-danger: #8c1107;
 
 $c-1px: 0.0625rem;
 $c-2px: 0.125rem;
@@ -40,7 +45,7 @@ $c-gs-95: #f2f2f2;
 $c-gs-100: #fff;
 
 @mixin focus {
-    outline: 2px solid #4c9aff;
+    outline: 2px solid $c-focus;
     outline-offset: 2px;
     position: relative;
     z-index: 999;

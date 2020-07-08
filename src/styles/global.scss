@@ -1,0 +1,34 @@
+@import "common";
+
+@mixin intent($c-intent, $invert: false) {
+    background: $c-intent;
+    @if $invert {
+        color: #fff;
+    }
+
+    &:focus,
+    &:hover {
+        background: $c-gs-95;
+        color: #000;
+    }
+}
+
+.c-primary {
+    @include intent($c-intent-primary, true);
+}
+
+.c-secondary {
+    @include intent($c-intent-secondary, true);
+}
+
+.c-success {
+    @include intent($c-intent-success, true);
+}
+
+.c-warning {
+    @include intent($c-intent-warning, true);
+}
+
+.c-danger {
+    @include intent($c-intent-danger, true);
+}

@@ -18,6 +18,11 @@ module.exports = {
         },
     },
     displayName: packageJson.name,
+    globals: {
+        "ts-jest": {
+            packageJson: "package.json",
+        },
+    },
     moduleNameMapper: {
         "\\.(gif|jpeg|jpg|otf|png|svg|ttf|woff|woff2)$":
             "<rootDir>/__mocks__/fileMock.js",

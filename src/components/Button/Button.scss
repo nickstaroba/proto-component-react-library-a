@@ -1,0 +1,21 @@
+@import "../../styles/common";
+
+.Button {
+    @include font-body;
+    border: 2px solid transparent;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: $c-18px;
+    height: $c-48px;
+    padding: 0 $c-24px;
+
+    &:focus {
+        border: 2px solid $c-focus;
+        outline: 0;
+    }
+
+    &:disabled {
+        background: $c-gs-95;
+        cursor: not-allowed;
+    }
+}
